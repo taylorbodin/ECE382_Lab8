@@ -27,9 +27,17 @@ int main(void) {
 
 	while(1){
 
-		while(centerDistance < (DIST_THRESHOLD_C - SENSOR_NOISE)){
+		while(centerDistance < (DIST_THRESHOLD_C + SENSOR_NOISE)){
 			hugWallL(leftDistance);
 		}
+
+		turnRight(250);
+
+		while(centerDistance < (DIST_THRESHOLD_C + SENSOR_NOISE)){
+			hugWallL(leftDistance);
+		}
+
+
 	}
 } // end main
 
